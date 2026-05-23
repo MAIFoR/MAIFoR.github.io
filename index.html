@@ -51,6 +51,13 @@
       max-width: 680px;
     }
 
+    .logo {
+      display: block;
+      width: clamp(220px, 60%, 380px);
+      height: auto;
+      margin: 0 auto 2.5rem;
+    }
+
     .badge {
       display: inline-block;
       font-size: 0.75rem;
@@ -73,20 +80,16 @@
       color: #ffffff;
     }
 
-    .abbr {
-      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-      color: #7c9cff;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      margin-bottom: 2rem;
-    }
-
-    .divider {
-      width: 48px;
-      height: 3px;
-      background: linear-gradient(90deg, #7c9cff, #b48fff);
-      border-radius: 2px;
-      margin: 0 auto 2rem;
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     p {
@@ -133,12 +136,12 @@
 </head>
 <body>
   <div class="container">
+    <img src="assets/logo-full-dark.svg" alt="MAIFoR – Mathew AI Forskning og Rådgivning" class="logo" />
+
     <div class="badge">Coming Soon</div>
 
-    <h1>Mathew AI Forskning og Rådgivning</h1>
-    <div class="abbr">MAIFoR</div>
-
-    <div class="divider"></div>
+    <h1 class="visually-hidden">Mathew AI Forskning og Rådgivning</h1>
+    <div class="visually-hidden">MAIFoR</div>
 
     <p>Domain-anchored independent research and advisory in AI and machine learning for industrial systems.</p>
 
